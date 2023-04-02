@@ -8,25 +8,25 @@ public class Transaction implements Serializable {
 	private String username;
 	private String email;
 	private double unit;
-	private double price=10;
-	private double total;
+	private String status;
 	private LocalDate dt;
 
     public Transaction() {
 		
 	}
     
-    public Transaction(String username,String email,double unit,double price,double total,LocalDate dt) {
+    public Transaction(String username,String email,double unit, String status,LocalDate dt) {
 		
     	super();
     	this.username=username;
     	this.email=email;
     	this.unit=unit;
-    	this.price=10;
-    	this.total=total;
+    	this.status=status;
     	this.dt=dt;
     	   	
 	}
+    
+
 
 	public String getUsername() {
 		return username;
@@ -51,21 +51,13 @@ public class Transaction implements Serializable {
 	public void setUnit(double unit) {
 		this.unit = unit;
 	}
-
-	public double getPrice() {
-		return price;
+    
+	public String getStatus() {
+		return status;
 	}
 
-	public void setPrice(double price) {
-		this.price = price;
-	}
-
-	public double getTotal() {
-		return total;
-	}
-
-	public void setTotal(double total) {
-		this.total = total;
+	public void setStatus(String status) {
+		this.status = status;
 	}
 
 	public LocalDate getDt() {
@@ -78,9 +70,19 @@ public class Transaction implements Serializable {
 
 	@Override
 	public String toString() {
-		return "Transaction [username=" + username + ", email=" + email + ", unit=" + unit + ", price=" + price
-				+ ", total=" + total + ", dt=" + dt + "]";
+		return "Transaction [username=" + username + ", email=" + email + ", unit=" + unit + ", status=" + status
+				+ ", dt=" + dt + "]";
 	}
+
+	
+
+	
+
+
+
+
+
+
     
     
     
