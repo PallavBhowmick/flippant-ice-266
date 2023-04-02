@@ -2,24 +2,27 @@ package com.masai.entities;
 import java.io.Serializable;
 
 public class Customer extends User implements Serializable{
-	private double bill;
-	public Customer (double bill,String firstname,String lastname,String username, String password, String address,String mobile, String email) {
+	private double balance;
+	public Customer (double balance,String firstname,String lastname,String username, String password, String address,String mobile, String email) {
 		super(firstname,lastname,username,password,address,mobile,email);
-		this.bill=bill;
+		this.balance=balance;
 	}
-	public double getBill() {
-		return bill;
+	public double getBalance() {
+		return balance;
 	}
-	public void setBill(double bill) {
-		this.bill = bill;
+	public void setBalance(double balance) {
+		this.balance = balance;
 	}
 	@Override
 	public String toString() {
-		return "Customer [bill=" + bill + ", getBill()=" + getBill() + ", getFirstname()=" + getFirstname()
+		return "Customer [balance=" + balance + ", getBalance()=" + getBalance() + ", getFirstname()=" + getFirstname()
 				+ ", getLastname()=" + getLastname() + ", getUsername()=" + getUsername() + ", getPassword()="
 				+ getPassword() + ", getAddress()=" + getAddress() + ", getMobile()=" + getMobile() + ", getEmail()="
 				+ getEmail() + "]";
 	}
+
+	
+
 	
 	
 }
