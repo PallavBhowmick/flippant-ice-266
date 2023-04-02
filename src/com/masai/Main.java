@@ -185,11 +185,11 @@ public class Main {
 
 
 	private static String customerBillProduct(Scanner sc, String uname, Map<Integer, Product> products,
-			Map<String, Customer> customers, List<Transaction> transactions, AdminService prodService) throws InvalidDetailsException, InputInvalidException {
+			Map<String, Customer> customers, List<Transaction> transactions, CustomerService cusService) throws InvalidDetailsException, InputInvalidException {
 		// TODO Auto-generated method stub
 		System.out.println("please enter the Units of Electricity in KWh");
 		int units = sc.nextInt();
-		prodService.generateBill(id, units,uname, products,customers,transactions);
+		cusService.generateBill(id, units,uname, products,customers,transactions);
 		
 		
 		return "You have successfully paid the bill" ;
